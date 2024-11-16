@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        height: 100vh;
+        background-color: #f0f0f0;
+        position: relative;
+        
+    }
+     
+    
+    .chat-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: darkblue;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .chat-icon img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .chat-container {
+        width: 300px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        display: none;
+    }
+    
+    #chatbox {
+        max-height: 300px;
+        overflow-y: auto;
+        margin-bottom: 10px;
+    }
+    
+    .message {
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .bot {
+        background-color: #e0e0e0;
+    }
+    
+    .user {
+        background-color: darkblue;
+        color: white;
+        text-align: right;
+    }
+    
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    
+    .input-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    
+    button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: darkblue;
+        color: gold;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: darkblue;
+    }</style>
+    <title>Teen Talk</title>
+</head>
+<body style="background-image: url(Free\ HD\ Solid\ Color\ Wallpaper.jpg);">
+    <div class="chat-icon" onclick="toggleChat()">
+        <img src="download-removebg-preview.jpg" alt="Chatbot Icon">
+    </div>
+    <div class="chat-container" id="chatContainer">
+        <div id="chatbox">
+            <div class="message bot">
+                <img src="download-removebg-preview.jpg" alt="Chatbot Icon" class="icon">We are with you! How can I help you?
+            </div> 
+        </div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="May I help you....." onkeypress="handleKeyPress(event)">
+            <button onclick="submitMessage()">Submit</button>
+        </div>
+    </div>
+
+    
+    <script>function toggleChat() {
+        const chatContainer = document.getElementById('chatContainer');
+        if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
+            chatContainer.style.display = 'block';
+        } else {
+            chatContainer.style.display = 'none';
+        }
+    }
+    
+    function userReply(reply) {
+        const chatbox = document.getElementById('chatbox');
+        const userMessage = document.createElement('div');
+        userMessage.className = 'message user';
+        userMessage.textContent = reply;
+        chatbox.appendChild(userMessage);
+    
+        const botMessage = document.createElement('div');
+        botMessage.className = 'message bot';
+        const positiveReplies = [
+            'Believe in yourself,and anything is possible',
+            'Iam here to listen,and I care about you are going through',
+            'You dont have to face this. Let me help you find support',
+            'You are stronger than you think, and you can get through this difficult another way',
+            'Self-care is essential'
+        ];
+        const randomReply = positiveReplies[Math.floor(Math.random() * positiveReplies.length)];
+        botMessage.innerHTML = `<img src="download-removebg-preview.jpg" alt="Chatbot Icon" class="icon"> ${randomReply}`;
+        chatbox.appendChild(botMessage);
+    }
+    
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            submitMessage();
+        }
+    }
+    
+    function submitMessage() {
+        const userInput = document.getElementById('userInput');
+        userReply(userInput.value);
+        userInput.value = '';
+    }</script>
+</body> 
+</html>

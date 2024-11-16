@@ -1,0 +1,576 @@
+:root{
+   /* --blue:#3c6382;
+    --dark-blue:#0a3d62;*/
+    --yellow:#e7f868;
+    --dark-yellow:#ebe409;
+}
+
+
+
+*{
+    font-family:'Poppins',sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+
+*::selection{
+    background: var(--dark-yellow);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.heading{
+  text-align: center;
+  color:yellow;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding:.1rem;
+}
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    padding: 2rem;
+    }
+ header .navbar a{
+    font-size: 1.5rem;
+    margin-left: .5rem;
+    padding: .2rem 1rem;
+    border-radius: .3rem;
+    
+    color: var(--dark-yellow);
+ }
+ header .navbar a.active,
+ header .navbar a:hover{
+    background: var(--yellow);
+    color: #fff;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+
+ }
+ 
+ .container {
+  display: inline-block;
+  cursor: pointer;
+  
+}
+  
+  .bar1, .bar2, .bar3 {
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  
+  .change .bar2 {opacity: 0;}
+  
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  section{
+    min-height: 100vh;
+    padding: 1rem 9%;
+    padding-top: 8rem;
+  }
+  
+  header{
+    background-color:white;
+    color:var(--yellow);
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  .home{
+    background: url(Free\ HD\ Solid\ Color\ Wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 1300px;
+    text-align: center;
+    
+  }
+  .home .content{
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  .home .content h1{
+    font-size: 5rem;
+    color:var(--dark-yellow);
+      }
+     
+      .home .content h3{
+        font-size: 4rem;
+        color: var(--yellow);
+        font-weight: normal;
+          }
+.home .content .btn{
+  display: inline-block;
+  padding: 0.7em 3rem ;
+  color: #fff;
+  background: var(--yellow);
+  border-radius: .5rem;
+  box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+  margin-top: 1rem;
+  font-size: 1.7rem;
+}
+.home .content .btn:hover{
+  background: var(--dark-yellow);
+}         
+.WHY .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
+
+  .WHY .box-container .box{
+    flex:1 1 30rem ;
+    border-radius: .5rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .WHY .box-container .box img{
+    height: 12rem;
+    padding: 1rem;
+    border-radius:55px;
+  }
+  /*.WHY .box-container .box h3{
+    color: var(--yellow);
+    font-size: 1.5rem;
+  }*/
+  .WHY .box-container .box:hover{
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+  }
+.PREVENTION{
+  background: url(Free\ HD\ Solid\ Color\ Wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 1300px;
+  text-align: center;
+}
+.PREVENTION .column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PREVENTION .column .main-image img{
+  width: 43vh;
+  }
+  .PREVENTION .column .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .PREVENTION .column .box-container .box{
+    margin:1rem ;
+    text-align: center;
+  }
+  .PREVENTION .column .box-container .box img{
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 55px;
+     
+  }
+  .PREVENTION .column .box-container .box h3{
+    font-size: 1rem;
+    color: yellow;
+
+  }
+  
+  .HELP.column{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+  }
+  .HELP.column .box-container{
+    margin: 1.5rem;
+    flex: 1 1 50rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  
+  .CONTACT{
+    background: url(Free\ HD\ Solid\ Color\ Wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 1300px;
+    text-align: center;
+    
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    /*background-color:yellow;*/
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  
+  
+ /* .footer{
+    background: url(Free\ HD\ Solid\ Color\ Wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 1300px;
+    text-align: left;
+  }
+  .footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer .box-container .box{
+    flex: 1 1 25rem;
+    margin: 2rem;
+  }
+  .footer .box-container .box  h3{
+    font-size: 2.5rem;
+    color: var(--yellow);
+    padding: 1rem 0;
+  }
+  .footer .box-container .box p{
+    font-size: 1.5rem;
+    color: var(--dark-yellow);
+    padding: 5rem 0;
+
+  }
+  .footer .box-container .box a{
+    font-size: 1.5rem;
+    color: var(--dark-yellow);
+    padding: 5rem 0;
+    display: block;
+  }
+.footer a:hover{
+  text-decoration: underline;
+}
+.footer .credit{
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  border-top: 1rem solid rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 1rem;
+  color: var(--dark-yellow);
+}
+.footer .credit a{
+  color: var(--dark-yellow);
+}
+
+/*body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: darkblue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.chat-container {
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  display: none;
+}
+
+#chatbox {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.bot {
+  background-color: #e0e0e0;
+}
+
+.user {
+  background-color: darkblue;
+  color: white;
+  text-align: right;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: gold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: darkblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.chat-container {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    display: none;
+}
+
+#chatbox {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bot {
+    background-color: #e0e0e0;
+}
+
+.user {
+    background-color: darkblue;
+    color: white;
+    text-align: right;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: gold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
